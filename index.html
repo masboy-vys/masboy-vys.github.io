@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>masboy-vys — builds &amp; automation</title>
+<style>
+:root{--bg:#0d1117;--fg:#e6edf3;--muted:#8b949e;--accent:#58a6ff;--card:#161b22;--border:#30363d}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+.wrap{max-width:760px;margin:0 auto;padding:64px 24px}
+header{margin-bottom:48px}
+h1{font-size:2.2rem;margin-bottom:8px}
+.sub{color:var(--muted);font-size:1.05rem}
+section{margin-bottom:40px}
+h2{font-size:1.25rem;margin-bottom:16px;color:var(--accent)}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:16px}
+.card h3{margin-bottom:6px;font-size:1.05rem}
+.card p{color:var(--muted);font-size:.95rem}
+.tags{margin-top:10px}
+.tag{display:inline-block;font-size:.75rem;border:1px solid var(--border);border-radius:20px;padding:2px 10px;margin:2px;color:var(--muted)}
+a{color:var(--accent)}
+footer{color:var(--muted);font-size:.85rem;border-top:1px solid var(--border);padding-top:20px}
+code{background:#1c2128;padding:2px 6px;border-radius:6px;font-size:.85em}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<h1>masboy-vys</h1>
+<p class="sub">I build small systems and keep them running — LLM gateways, chat bots, and content automation on a headless VPS.</p>
+</header>
+<section>
+<h2>Projects</h2>
+<div class="card">
+<h3>Hermes AI stack on VPS</h3>
+<p>Self-hosted setup: <code>9Router</code> as a multi-provider LLM gateway (OpenAI-compatible API with failover between providers) fronting <code>Hermes Agent</code>, with a Telegram bot interface. Supervised with <code>nohup</code> on a headless VM with no systemd user bus — logs, restarts and health checks handled with shell tooling.</p>
+<div class="tags"><span class="tag">Node.js</span><span class="tag">Python</span><span class="tag">Telegram Bot API</span><span class="tag">Linux</span></div>
+</div>
+<div class="card">
+<h3>YouTube Shorts automation pipeline</h3>
+<p>Built an end-to-end pipeline that produced and uploaded Shorts daily to a YouTube channel: script &rarr; TTS narration &rarr; <code>ffmpeg</code> render with captions &rarr; upload via the YouTube Data API (OAuth). Scheduled with cron, with quota management and retry logic. Paused for now.</p>
+<div class="tags"><span class="tag">Python</span><span class="tag">ffmpeg</span><span class="tag">YouTube Data API</span><span class="tag">cron</span></div>
+</div>
+<div class="card">
+<h3>vys.is-a.dev — this site</h3>
+<p>Personal landing page hosted on GitHub Pages, DNS via the is-a.dev community program. Hand-written HTML, zero build step.</p>
+<div class="tags"><span class="tag">HTML/CSS</span><span class="tag">GitHub Pages</span></div>
+</div>
+</section>
+<section>
+<h2>Now</h2>
+<p style="color:var(--muted)">Keeping the VPS stack alive and experimenting with AI agent tooling.</p>
+</section>
+<footer>
+<p>Find me on <a href="https://github.com/masboy-vys">GitHub</a> &middot; &copy; 2026 masboy-vys</p>
+</footer>
+</div>
+</body>
+</html>
